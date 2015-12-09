@@ -1,0 +1,41 @@
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/chapter8/layout/template-anonymous.zul"?>
+<zk>
+	<hbox self="@define(content)" vflex="2" hflex="1" align="center"
+		pack="center" spacing="20px">
+		<vlayout>
+			<window id="loginWin"
+				apply="org.zkoss.essentials.chapter8.LoginController"
+				title="Iniciar Sesion" border="normal" hflex="min">
+				<vbox hflex="min" align="center">
+					<grid hflex="min">
+						<columns>
+							<column hflex="min" align="right" />
+							<column />
+						</columns>
+						<rows>
+							<row>
+								Usuario :
+								<textbox id="account" width="200px" />
+							</row>
+							<row>
+								Clave :
+								<textbox id="password" type="password" width="200px" />
+							</row>
+						</rows>
+					</grid>
+					<div>	
+						<div>
+							<label id="message" sclass="warn" value="&#160;" />			
+						</div>	
+						<div>
+							<button id="login" label="Ingresar" width="100px" />
+							<button id="exit" label="Salir" width="100px" />
+						</div>									
+					</div>			
+				</vbox>
+			</window>
+			(use account='zkoss' and password='1234' to login)
+		</vlayout>
+	</hbox>
+</zk>
